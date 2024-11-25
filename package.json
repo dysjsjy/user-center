@@ -1,0 +1,8 @@
+{
+  "name": "user-center",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}

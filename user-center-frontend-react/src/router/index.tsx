@@ -1,6 +1,6 @@
 import UserManage from "@/pages/Admin/userManage";
 import Home from "@/pages/Home";
-import UserLogin from "@/pages/User/Login";
+import UserLoginPage from "@/pages/User/Login";
 import UserRegister from "@/pages/User/Register";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/user/login',
-        element: <UserLogin/>
+        element: <UserLoginPage/>
     },
     {
         path: '/user/register',

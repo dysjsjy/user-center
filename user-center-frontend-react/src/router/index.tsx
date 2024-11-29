@@ -1,10 +1,26 @@
+import UserManage from "@/pages/Admin/userManage";
+import Home from "@/pages/Home";
+import UserLogin from "@/pages/User/Login";
+import UserRegister from "@/pages/User/Register";
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from '@/pages/HomePage';
+
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <HomePage />
+        element: <Home />
+    },
+    {
+        path: '/user/login',
+        element: <UserLogin/>
+    },
+    {
+        path: '/user/register',
+        element: <UserRegister/>
+    },
+    {
+        path: '/admin/userManage',
+        element: <UserManage/>
     }
 ])
 

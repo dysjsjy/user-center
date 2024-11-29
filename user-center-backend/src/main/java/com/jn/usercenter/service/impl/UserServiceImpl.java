@@ -116,10 +116,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         //用户密码加密
         //加密
         String encryptPassword = DigestUtils.md5DigestAsHex((SALT + password).getBytes());
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("username", username);
-        queryWrapper.eq("password", encryptPassword);
-        User user = userMapper.selectOne(queryWrapper);
+//        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+//        queryWrapper.eq("username", username);
+//        queryWrapper.eq("password", encryptPassword);
+//        User user = userMapper.selectOne(queryWrapper);
+        User user = userMapper.userLogin(username, encryptPassword);
         if (user == null) {
             log.info("登录失败，用户名或密码错误。");
             return null;
